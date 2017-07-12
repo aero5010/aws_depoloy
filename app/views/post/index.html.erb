@@ -1,10 +1,10 @@
-<h1>POST LIST</h1>
-
-<% @posts.each do |post| %>
-    <a href="/post/show/<%=post.id%>"><%=post.title%></a><br/>
-<% end %>
-
-<br>
-<hr>
-<br>
-<a href="/post/new">새로운포스트 만들기</a>
+<div class="container">
+    <h1>POST LIST</h1>
+    
+    <% @posts.each do |post| %>
+        <a href="/post/show/<%=post.id%>"><%=post.title%></a><br/>
+    <% end %>
+    <a href="/post/new">새로운포스트 만들기</a>
+    
+    <%= link_to "로그인 페이지가기", root_path %><br>
+</div>

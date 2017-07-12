@@ -1,6 +1,23 @@
 Rails.application.routes.draw do
   
+  
+  
+  devise_for :people
+  devise_for :users
+  get 'home/shelf'
+
+  get 'user/registrate'
+
+  get 'user/login'
+
   root 'post#index'
+  
+  post 'user/create'
+  post 'user/sign_in' => 'user#sign_in'
+  get 'book/shelf' => 'home#shelf'
+  
+  delete 'user/logout' => 'user#sign_out'
+  
   get 'post/index'
 
   get 'post/new'
